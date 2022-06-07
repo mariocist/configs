@@ -22,25 +22,33 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Syntax Highlighting
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
+Plug 'othree/html5.vim'
+Plug 'evanleck/vim-svelte', {'branch': 'main'}
 
 " Theme
 Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'sainnhe/everforest'
 
 " Nav
 Plug 'easymotion/vim-easymotion'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'preservim/nerdtree' 
+Plug 'ap/vim-buftabline'
 
 call plug#end()
 
 " Global config
-colorscheme gruvbox
-let g:gruvbox_contrast_dark = "hard"
+colorscheme everforest
 
 highlight Normal ctermbg=none
 highlight NonText ctermbg=none
+
+" Buftabline
+set hidden
+nnoremap <C-N> :bnext<CR>
+nnoremap <C-P> :bprev<CR>
 
 let mapleader=" "
 
@@ -49,7 +57,7 @@ nmap <Leader>s <Plug>(easymotion-s2)
 
 " NerdTree
 nmap <Leader>n :NERDTreeFind<CR>
-" let NERDTreeQuitOnOpen=1
+"let NERDTreeQuitOnOpen=1
 
 " open new split panes to right and below
 set splitright
