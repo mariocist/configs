@@ -63,15 +63,6 @@ nmap <Leader>n :NERDTreeFind<CR>
 set splitright
 set splitbelow
 
-" start terminal in insert mode
-au BufEnter * if &buftype == 'terminal' | :startinsert | endif
-" open terminal on ctrl+n
-function! OpenTerminal()
-  split term://zsh
-  resize 10
-endfunction
-nnoremap <Leader>b :call OpenTerminal()<CR>
-
 " Shortcuts
 nmap <Leader>w :w<CR>
 nmap <Leader>q :q<CR>
